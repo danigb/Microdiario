@@ -7,16 +7,27 @@ group :assets do
 end
 gem 'jquery-rails'
 gem "rspec-rails", ">= 2.6.1", :group => [:development, :test]
-gem "database_cleaner", ">= 0.6.7", :group => :test
-gem "mongoid-rspec", ">= 1.4.4", :group => :test
-gem "factory_girl_rails", ">= 1.1.0", :group => :test
-gem "cucumber-rails", ">= 1.0.2", :group => :test
-gem "capybara", ">= 1.0.1", :group => :test
-gem "launchy", ">= 2.0.5", :group => :test
+
 gem "bson_ext", ">= 1.3.1"
 gem "mongoid", ">= 2.2.0"
 gem "omniauth", ">= 0.2.6", :branch => '0-3-stable', :git => "git://github.com/intridea/omniauth.git"
+gem "simple_form"
+gem "redcarpet"
+gem "kaminari"
+gem "has_scope"
+
+group :test do
+  gem "database_cleaner", ">= 0.6.7"
+  gem "mongoid-rspec", ">= 1.4.4"
+  gem "factory_girl_rails", ">= 1.1.0"
+  gem "cucumber-rails", ">= 1.0.2"
+  gem "capybara", ">= 1.0.1"
+  gem "launchy", ">= 2.0.5"
+end
+
+
+
 #gem "omniauth"
 #gem "omniauth", ">= 0.2.6", :git => "git://github.com/intridea/omniauth.git"
-#gem 'omniauth', '~> 0.2.0.beta3' 
+#gem 'omniauth', '~> 0.2.0.beta3'
 

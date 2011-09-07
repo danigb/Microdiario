@@ -1,0 +1,16 @@
+
+<%= simple_form_for @post do |form| %>
+<%= form.input :body, as: :text, label: false %>
+<%= form.submit 'Guarda', class: 'btn' %>
+<% end %>
+
+<div id="posts">
+<% @posts.each do |post| %>
+<div class="post" id="post-<%= post.id %>">
+<%= post.body %>
+<div class="actups">
+<%= link_to 'Borrar', post, method: :delete, confirm: 'Seguro?' %>
+</div>
+<% end %>
+</div>
+
