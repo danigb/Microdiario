@@ -11,9 +11,10 @@ div#page {
   margin: 10px auto;
 }
 
-textarea#post_body {
-  height: 4em;
-  width: 100%;
+form#new-post {
+  textarea {
+    height: 4em;
+    width: 100%;
+  }
 }
 
-form div.input {margin-left: 0;}

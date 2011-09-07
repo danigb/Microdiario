@@ -1,10 +1,3 @@
 
-<%= simple_form_for @post do |form| %>
-<%= form.input :body, as: :text, label: false %>
-<%= form.submit 'Guarda', class: 'btn' %>
-<% end %>
-
-<div id="posts">
-<%= render @posts %>
-</div>
+<%= @posts.to_json %>
 

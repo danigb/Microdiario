@@ -4,6 +4,7 @@ group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+  gem 'ejs'
 end
 
 group :production do
@@ -22,6 +23,7 @@ gem "redcarpet"
 gem "kaminari"
 gem "has_scope"
 gem "mongoid_search"
+gem "rails-backbone"
 
 group :test do
   gem "database_cleaner", ">= 0.6.7"

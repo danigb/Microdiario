@@ -9,5 +9,9 @@ class Post
 
   default_scope :order_by => [:created_at, :desc]
   search_in :body, :tags => :name
+
+  def as_json(options = {})
+    super(only: [:body])
+  end
 end
 
