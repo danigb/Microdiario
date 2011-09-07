@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaker backend - <%= yield :title %></title>
+  <%= javascript_include_tag "backend" %>
+  <%= stylesheet_link_tag "backend" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="topbar">
+      <div class="fill">
+        <div class="container">
+          <h3><%= link_to 'Microdiario backend', backend_root_path %></h3>
+          <ul>
+            <li><%= link_to 'Posts', backend_posts_path %></li>
+            <li><%= link_to 'Users', backend_users_path %></li>
+            <li><%= link_to 'Microdiario', root_path %>
+          </ul>
+        </div>
+      </div> <!-- /fill -->
+<ul class="nav secondary-menu">
+  <li><%= current_user.name %></li>
+</ul>
+
+    </div>
+<div class="container">
+<div class="page">
+<%= yield %>
+</div>
+</div>
+</body>
+</html>
+

@@ -1,6 +1,5 @@
 class PostsController < ApplicationController
   respond_to :html, :json
-  http_basic_authenticate_with :name => "danigb", :password => "dani"
 
   def index
     @posts = Post.all
