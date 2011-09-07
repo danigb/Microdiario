@@ -15,5 +15,8 @@ gem "capybara", ">= 1.0.1", :group => :test
 gem "launchy", ">= 2.0.5", :group => :test
 gem "bson_ext", ">= 1.3.1"
 gem "mongoid", ">= 2.2.0"
-gem "omniauth", ">= 0.2.6", :git => "git://github.com/intridea/omniauth.git"
+gem "omniauth", ">= 0.2.6", :branch => '0-3-stable', :git => "git://github.com/intridea/omniauth.git"
+#gem "omniauth"
+#gem "omniauth", ">= 0.2.6", :git => "git://github.com/intridea/omniauth.git"
+#gem 'omniauth', '~> 0.2.0.beta3' 
 
