@@ -1,2 +1,3 @@
-class Backend::UsersController < ApplicationController
+class Backend::UsersController < Backend::ResourceController
 end
+

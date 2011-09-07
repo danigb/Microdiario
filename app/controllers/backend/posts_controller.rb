@@ -1,3 +1,3 @@
-class Backend::PostsController < ApplicationController
+class Backend::PostsController < Backend::ResourceController
 end
 

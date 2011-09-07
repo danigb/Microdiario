@@ -12,11 +12,5 @@ class Post
 
   default_scope :order_by => [:date_at, :desc]
   search_in :body#, :tags => :name
-
-  def as_json(options={})
-    attrs = super(options)
-    attrs["id"] = attrs["_id"]
-    attrs
-  end
 end
 

@@ -133,6 +133,9 @@ GEM
       term-ansicolor (~> 1.0.5)
     hike (1.2.1)
     i18n (0.6.0)
+    inherited_resources (1.2.2)
+      has_scope (~> 0.5.0)
+      responders (~> 0.6.0)
     jquery-rails (1.0.13)
       railties (~> 3.0)
       thor (~> 0.14)
@@ -209,6 +212,7 @@ GEM
     rake (0.9.2)
     rdoc (3.9.4)
     redcarpet (1.17.2)
+    responders (0.6.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rspec (2.6.0)
@@ -280,6 +284,7 @@ DEPENDENCIES
   factory_girl_rails (>= 1.1.0)
   has_scope
   heroku
+  inherited_resources
   jquery-rails
   kaminari
   launchy (>= 2.0.5)

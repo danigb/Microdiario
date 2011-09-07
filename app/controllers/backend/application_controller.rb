@@ -2,7 +2,7 @@
 
 class Backend::ApplicationController < ApplicationController
   protect_from_forgery
-  before_filter :require_admin
+  before_filter :require_user
 
   protected
   def require_admin
