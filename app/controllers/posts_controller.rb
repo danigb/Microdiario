@@ -7,6 +7,11 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def search
+    @term = params[:term]
+    @posts = Post.search @term
+  end
+
   def create
     @post = Post.new(params[:post])
     @post.save

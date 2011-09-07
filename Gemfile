@@ -21,6 +21,7 @@ gem "simple_form"
 gem "redcarpet"
 gem "kaminari"
 gem "has_scope"
+gem "mongoid_search"
 
 group :test do
   gem "database_cleaner", ">= 0.6.7"

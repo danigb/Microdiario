@@ -4,7 +4,7 @@ class User
   field :uid, :type => String
   field :name, :type => String
   field :email, :type => String
-  has_many :posts
+  references_many :posts
 
   def self.create_with_omniauth(auth)
     begin

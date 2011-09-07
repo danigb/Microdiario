@@ -7,8 +7,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="topbar">
+  <div class="fill">
+    <div class="container">
+      <h3><a href="/">Microdiario</a></h3>
+          <form id="search" action="#">
+            <input type="text" name="term" id="term" placeholder="Buscar ...">
+          </form>
+    </div>
+  </div>
+</div>
+
+<div id="viewport">
+<div id="page" class="container">
+<div id="flashes">
+  <% flash.each do |name, msg| %>
+      <% clazz = name == :notice ? 'success' : name %>
+      <% clazz = 'error' if name == :alert %>
+      <%= content_tag :div, :class => "flash alert-message #{clazz}" do %>
+        <a class="close" href="#">×</a>
+        <%= content_tag :p, msg %>
+      <% end %>
+  <% end %>
+</div>
 
 <%= yield %>
+</div>
+</div>
 
 </body>
 </html>
+

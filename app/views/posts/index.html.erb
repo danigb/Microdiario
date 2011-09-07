@@ -5,13 +5,6 @@
 <% end %>
 
 <div id="posts">
-<% @posts.each do |post| %>
-<div class="post" id="post-<%= post.id %>">
-<%= post.body %>
-<%= post.created_at %>
-<div class="actups">
-<%= link_to 'Borrar', post, method: :delete, confirm: 'Seguro?' %>
-</div>
-<% end %>
+<%= render @posts %>
 </div>
 
