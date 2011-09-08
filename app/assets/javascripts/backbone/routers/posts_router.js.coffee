@@ -4,7 +4,6 @@ class Microdiario.Routers.PostsRouter extends Backbone.Router
     @posts.reset options.posts
 
   routes:
-    "/new": "newPost"
     "/diario": "index"
     "/:id/edit": "edit"
     "/:id": "show"
@@ -14,12 +13,12 @@ class Microdiario.Routers.PostsRouter extends Backbone.Router
     window.location.hash = "/diario"
 
   newPost: ->
-    @view = new Microdiario.Views.Posts.NewView(collection: @posts)
-    $("#posts").html(@view.render().el)
 
   index: ->
-    @view = new Microdiario.Views.Posts.IndexView(posts: @posts)
-    $("#posts").html(@view.render().el)
+    @viewNew = new Microdiario.Views.Posts.NewView(collection: @posts)
+    $("#newPost").html(@viewNew.render().el)
+    @viewIndex = new Microdiario.Views.Posts.IndexView(posts: @posts)
+    $("#posts").html(@viewIndex.render().el)
 
   show: (id) ->
     post = @posts.get(id)

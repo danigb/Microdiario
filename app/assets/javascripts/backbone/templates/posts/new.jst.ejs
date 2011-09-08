@@ -1,20 +1,9 @@
-<h1>New post</h1>
-
 <form id="new-post" name="post">
-  <div class="field">
-    <label for="body"> body:</label>
-    <input type="text" name="body" id="body" value=<%= body %> >
-  </div>
+<div class="date_at"><strong><%= date_at %></strong></div>
+<input type="hidden" name="date_at" id="date_at" value=<%= date_at %> >
+<textarea name="body" id="body" value="<%= body %>">
+</textarea>
 
-  <div class="field">
-    <label for="date_at"> date_at:</label>
-    <input type="text" name="date_at" id="date_at" value=<%= date_at %> >
-  </div>
-
-  <div class="actions">
-    <input type="submit" value="Create Post" />
-  </div>
-
+<input type="submit" value="Guarda" class="btn" />
 </form>
 
-<a href="#/index">Back</a>

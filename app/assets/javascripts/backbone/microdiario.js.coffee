@@ -5,6 +5,8 @@
 #= require_tree ./views
 #= require_tree ./routers
 
+window.MD = {}
+
 window.Microdiario =
   Models: {}
   Collections: {}
