@@ -1,9 +1,14 @@
-<form id="new-post" name="post">
+<form id="new-post" name="post" class="">
 <div class="date_at"><strong><%= date_at %></strong></div>
-<input type="hidden" name="date_at" id="date_at" value=<%= date_at %> >
+<div id="date_at_field" style="display:none">
+<label>Time machine:</label>
+<input type="text" name="date_at" id="date_at" value=<%= date_at %> >
+</div>
 <textarea name="body" id="body" value="<%= body %>">
 </textarea>
-
+<div>
+<a id="timemachine" href="#">timemachine</a>
+</div>
 <input type="submit" value="Guarda" class="btn" />
 </form>
 

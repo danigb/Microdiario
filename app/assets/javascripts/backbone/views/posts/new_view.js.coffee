@@ -6,6 +6,7 @@ class Microdiario.Views.Posts.NewView extends Backbone.View
   events:
     "submit #new-post": "save"
     "focus textarea": "stamp"
+    "click #timemachine": "timemachine"
 
   constructor: (options) ->
     super(options)
@@ -15,7 +16,11 @@ class Microdiario.Views.Posts.NewView extends Backbone.View
       this.render()
 
   stamp: ->
-    @options.model.set {date_at: MD.Time.stamp()}
+    @options.model.set({date_at: MD.Time.stamp()}) if @$('#date_at_field').is(':hidden')
+
+  timemachine: ->
+    this.$("#date_at_field").toggle()
+    false
 
   save: (e) ->
     e.preventDefault()
