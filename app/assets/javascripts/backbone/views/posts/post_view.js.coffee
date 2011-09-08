@@ -6,7 +6,7 @@ class Microdiario.Views.Posts.PostView extends Backbone.View
   events:
     "click .destroy" : "destroy"
 
-  tagName: "div"
+  tagName: "blockquote"
 
   destroy: () ->
     if confirm('¡¿Seguro?!')
@@ -15,6 +15,10 @@ class Microdiario.Views.Posts.PostView extends Backbone.View
     return false
 
   render: ->
-    $(this.el).html(this.template(this.options.model.toJSON() ))
+    params = @options.model.toJSON()
+    params.body = MD.Txt.body(@options.model.get 'body')
+    params.date_at = "Por la mañana #{@options.model.get('date_at')}"
+
+    $(this.el).html this.template(params)
     return this
 

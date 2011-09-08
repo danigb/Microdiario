@@ -27,7 +27,6 @@ class Microdiario.Views.Posts.NewView extends Backbone.View
     @options.collection.create(@options.model.toJSON(),
       success: (model) =>
         @options.model = new @options.collection.model()
-        MD.alerts.show('success', 'Guardado!')
         @render()
 
       error: (model, jqXHR) =>
