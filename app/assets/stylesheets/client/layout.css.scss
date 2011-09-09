@@ -13,3 +13,18 @@ form#new-post {
   }
 }
 
+.acts {
+  font-size: 80%;
+  a.action {content: ''}
+  .add:before { content: "\271A"; }
+  .edit:before {content: "\270E"; }
+  .destroy:before { content: "\2718"; }
+  .save:before { content: "\2714"; }
+  .email:before { content: "\2709";}
+  .like:before { content: "\2764";}
+  .next:before { content: "\279C";}
+  .star:before { content: "\2605"; }
+  .spark:before { content: "\2737"; }
+  .play:before { content: "\25B6";}
+}
+
