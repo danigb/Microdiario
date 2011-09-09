@@ -9,6 +9,7 @@ test:
 # set these environment variables on your prod server
 production:
   uri: <%= ENV['MONGOHQ_URL'] %>
+  database: microdiario
 
 # set these environment variables on your prod server
 noheroku_production:
