@@ -1,9 +1,8 @@
 <div class="post" id="post-<%= id %>">
-	<p class="acts">
-		<a href="#/<%= id %>/edit">Editar
-		<a href="#/<%= id %>/destroy" class="destroy">Borrar</a>
-	</p>
 	<p class="body"><%= body %></p>
-	<small class="date_at"><%= date_at %></small>
+	<small class="date_at"><%= date_at %>
+	<a class="action edit" href="#/<%= id %>/edit">Editar</a>
+	<a class="action destroy" href="#/<%= id %>/destroy">Borrar</a>
+  </small>
 </div>
 

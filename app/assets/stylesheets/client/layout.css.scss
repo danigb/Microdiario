@@ -1,0 +1,27 @@
+
+div#viewport {
+  position: fixed;
+  left:0;right:0;bottom:0;
+  top: 42px;
+  overflow: auto;
+}
+
+form#new-post {
+  textarea {
+    height: 4em;
+    width: 100%;
+  }
+}
+
+  a.action {font-size: 80%;}
+  a.action.add:before { content: "\271A"; }
+  a.action.edit:before {content: "\270E"; }
+  a.action.destroy:before { content: "\2718"; }
+  a.action.save:before { content: "\2714"; }
+  a.action.email:before { content: "\2709";}
+  a.action.like:before { content: "\2764";}
+  a.action.next:before { content: "\279C";}
+  a.action.star:before { content: "\2605"; }
+  a.action.spark:before { content: "\2737"; }
+  a.action.play:before { content: "\25B6";}
+
