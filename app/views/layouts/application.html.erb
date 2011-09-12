@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Microdiario</title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -11,27 +11,39 @@
   <div class="fill">
     <div class="container">
       <h3><a href="/">Microdiario</a></h3>
-          <form id="search" action="#">
-            <input type="text" name="term" id="term" placeholder="Buscar ...">
-          </form>
+
+      <form id="search" action="#">
+        <input type="text" name="term" id="term" placeholder="Buscar ...">
+      </form>
+      <ul class="nav secondary-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle"><%= current_user.name %></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Salir</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 
 <div id="viewport">
-<div id="page" class="container">
-<div id="flashes">
-  <% flash.each do |name, msg| %>
-      <% clazz = name == :notice ? 'success' : name %>
-      <% clazz = 'error' if name == :alert %>
-      <%= content_tag :div, :class => "flash alert-message #{clazz}" do %>
-        <a class="close" href="#">×</a>
-        <%= content_tag :p, msg %>
+  <div id="page" class="container">
+    <div id="flashes">
+      <% flash.each do |name, msg| %>
+          <% clazz = name == :notice ? 'success' : name %>
+          <% clazz = 'error' if name == :alert %>
+          <%= content_tag :div, :class => "flash alert-message #{clazz}" do %>
+              <a class="close" href="#">×</a>
+              <%= content_tag :p, msg %>
+          <% end %>
       <% end %>
-  <% end %>
-</div>
-<%= yield %>
-</div>
+    </div>
+    <%= yield %>
+  </div>
 </div>
 
 </body>

@@ -4,7 +4,13 @@ class User
   field :uid, :type => String
   field :name, :type => String
   field :email, :type => String
+  field :admin, :type => Boolean
   references_many :posts
+
+  def admin?
+
+  end
+
 
   def self.create_with_omniauth(auth)
     begin

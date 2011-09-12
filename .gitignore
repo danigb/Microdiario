@@ -62,4 +62,5 @@ tmp/*
 
 # vim artifacts
 **.swp
+.idea
 
