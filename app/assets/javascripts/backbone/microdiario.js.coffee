@@ -13,3 +13,6 @@ window.Microdiario =
   Routers: {}
   Views: {}
 
+$ ->
+    window.router = new Microdiario.Routers.PostsRouter();
+    Backbone.history.start();

@@ -7,5 +7,5 @@ class Microdiario.Models.Post extends Backbone.Model
 
 class Microdiario.Collections.PostsCollection extends Backbone.Collection
   model: Microdiario.Models.Post
-  url: '/posts'
+  url: '/posts.json'
 

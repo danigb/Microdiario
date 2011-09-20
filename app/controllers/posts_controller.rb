@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
-    @post = Post.new
+    respond_with @posts
   end
 
   def search

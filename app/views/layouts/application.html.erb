@@ -12,20 +12,22 @@
     <div class="container">
       <h3><a href="/">Microdiario</a></h3>
 
+      <% if current_user %>
       <form id="search" action="#">
         <input type="text" name="term" id="term" placeholder="Buscar ...">
       </form>
       <ul class="nav secondary-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle"><%= current_user.name %></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Salir</a></li>
-            <li><a href="#">Perfil</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Ayuda</a></li>
-          </ul>
-        </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle"><%= current_user.name %></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Salir</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Ayuda</a></li>
+              </ul>
+            </li>
       </ul>
+      <% end %>
     </div>
   </div>
 </div>

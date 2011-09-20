@@ -1,7 +1,7 @@
 class Microdiario.Routers.PostsRouter extends Backbone.Router
   initialize: (options) ->
     @posts = new Microdiario.Collections.PostsCollection()
-    @posts.reset options.posts
+    @posts.fetch()
 
   routes:
     "/diario": "index"
